@@ -1,0 +1,16 @@
+query events {
+  events {
+    id
+    status
+    startsAt
+    scoringType
+    teamEvent
+    course {
+      id
+      club
+      name
+    }
+  }
+}
+
+# export const withEventsQuery = graphql(eventsQuery)

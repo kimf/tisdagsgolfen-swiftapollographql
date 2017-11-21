@@ -1,0 +1,23 @@
+query liveLeaderboardQuery($scoringSessionId: ID!) {
+  user {
+    id
+  }
+  liveLeaderboard(scoringSessionId: $scoringSessionId) {
+    id
+    position
+    photo
+    name
+    beers
+    kr
+    points
+    strokes
+  }
+}
+
+# export const withLiveLeaderboardQuery = graphql(liveLeaderboardQuery, {
+#   options: ({ scoringSessionId }) => ({
+#     variables: { scoringSessionId },
+#     fetchPolicy: 'network-only',
+#     pollInterval: 30000
+#   })
+# })

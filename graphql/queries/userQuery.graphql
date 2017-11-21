@@ -1,0 +1,9 @@
+query getAllUsers {
+  players: users {
+    id
+    email
+    firstName
+    lastName
+    photo
+  }
+}

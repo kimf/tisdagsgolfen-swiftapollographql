@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DF04081E2F6CA6C215A3F68 /* Pods_Tisdagsgolfen.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FCE69FB9001F01386D10C68 /* Pods_Tisdagsgolfen.framework */; };
+		B921959F1FC45A740077D472 /* graphql in Resources */ = {isa = PBXBuildFile; fileRef = B921959D1FC45A740077D472 /* graphql */; };
+		B92195A01FC45A740077D472 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B921959E1FC45A740077D472 /* API.swift */; };
 		B9502D571FC31C24005D9A91 /* SeasonPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9502D561FC31C24005D9A91 /* SeasonPickerController.swift */; };
 		B9502D591FC31CA6005D9A91 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9502D581FC31CA6005D9A91 /* MainViewController.swift */; };
+		B95A1D641FC4592300E95478 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = B95A1D611FC4592300E95478 /* schema.json */; };
 		B96547501FC2C701000C3F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965474F1FC2C701000C3F5F /* AppDelegate.swift */; };
 		B96547571FC2C701000C3F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B96547561FC2C701000C3F5F /* Assets.xcassets */; };
 		B965475A1FC2C701000C3F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96547581FC2C701000C3F5F /* LaunchScreen.storyboard */; };
@@ -20,8 +24,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8FCE69FB9001F01386D10C68 /* Pods_Tisdagsgolfen.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tisdagsgolfen.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B921959D1FC45A740077D472 /* graphql */ = {isa = PBXFileReference; lastKnownFileType = folder; path = graphql; sourceTree = SOURCE_ROOT; };
+		B921959E1FC45A740077D472 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = SOURCE_ROOT; };
 		B9502D561FC31C24005D9A91 /* SeasonPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonPickerController.swift; sourceTree = "<group>"; };
 		B9502D581FC31CA6005D9A91 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B95A1D611FC4592300E95478 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
 		B965474C1FC2C701000C3F5F /* Tisdagsgolfen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tisdagsgolfen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B965474F1FC2C701000C3F5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B96547561FC2C701000C3F5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -32,6 +40,8 @@
 		B972E7311FC437250011510B /* WeekHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHeader.swift; sourceTree = "<group>"; };
 		B972E7331FC43ACA0011510B /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		B99A5DAF1FC2CC8E0059FA34 /* 1242x2208.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1242x2208.png; sourceTree = "<group>"; };
+		C3E1B5681B4B88DBFBD96782 /* Pods-Tisdagsgolfen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tisdagsgolfen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tisdagsgolfen/Pods-Tisdagsgolfen.debug.xcconfig"; sourceTree = "<group>"; };
+		D7F2F72EEA2CFC8BC987CF30 /* Pods-Tisdagsgolfen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tisdagsgolfen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tisdagsgolfen/Pods-Tisdagsgolfen.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +49,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF04081E2F6CA6C215A3F68 /* Pods_Tisdagsgolfen.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		300FB46D7F69A16F52313158 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3E1B5681B4B88DBFBD96782 /* Pods-Tisdagsgolfen.debug.xcconfig */,
+				D7F2F72EEA2CFC8BC987CF30 /* Pods-Tisdagsgolfen.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		64E54AFB35CB686467138906 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FCE69FB9001F01386D10C68 /* Pods_Tisdagsgolfen.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B96547431FC2C701000C3F5F = {
 			isa = PBXGroup;
 			children = (
 				B965474E1FC2C701000C3F5F /* Tisdagsgolfen */,
 				B965474D1FC2C701000C3F5F /* Products */,
+				300FB46D7F69A16F52313158 /* Pods */,
+				64E54AFB35CB686467138906 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +94,9 @@
 		B965474E1FC2C701000C3F5F /* Tisdagsgolfen */ = {
 			isa = PBXGroup;
 			children = (
+				B921959E1FC45A740077D472 /* API.swift */,
+				B921959D1FC45A740077D472 /* graphql */,
+				B95A1D611FC4592300E95478 /* schema.json */,
 				B9502D581FC31CA6005D9A91 /* MainViewController.swift */,
 				B965474F1FC2C701000C3F5F /* AppDelegate.swift */,
 				B96547561FC2C701000C3F5F /* Assets.xcassets */,
@@ -86,9 +119,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B965475E1FC2C701000C3F5F /* Build configuration list for PBXNativeTarget "Tisdagsgolfen" */;
 			buildPhases = (
+				D386D178C3A86E85B69957BC /* [CP] Check Pods Manifest.lock */,
 				B96547481FC2C701000C3F5F /* Sources */,
 				B96547491FC2C701000C3F5F /* Frameworks */,
 				B965474A1FC2C701000C3F5F /* Resources */,
+				0D0A20D1261D90FFE303FD1E /* [CP] Embed Pods Frameworks */,
+				476EE6870898EB63CCA23A84 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -138,13 +174,71 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B95A1D641FC4592300E95478 /* schema.json in Resources */,
 				B965475A1FC2C701000C3F5F /* LaunchScreen.storyboard in Resources */,
+				B921959F1FC45A740077D472 /* graphql in Resources */,
 				B99A5DB01FC2CC8E0059FA34 /* 1242x2208.png in Resources */,
 				B96547571FC2C701000C3F5F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D0A20D1261D90FFE303FD1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Tisdagsgolfen/Pods-Tisdagsgolfen-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Apollo/Apollo.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Apollo.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tisdagsgolfen/Pods-Tisdagsgolfen-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		476EE6870898EB63CCA23A84 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tisdagsgolfen/Pods-Tisdagsgolfen-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D386D178C3A86E85B69957BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tisdagsgolfen-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B96547481FC2C701000C3F5F /* Sources */ = {
@@ -157,6 +251,7 @@
 				B9502D571FC31C24005D9A91 /* SeasonPickerController.swift in Sources */,
 				B972E72E1FC42F5E0011510B /* Injection.swift in Sources */,
 				B96547501FC2C701000C3F5F /* AppDelegate.swift in Sources */,
+				B92195A01FC45A740077D472 /* API.swift in Sources */,
 				B9502D591FC31CA6005D9A91 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +379,7 @@
 		};
 		B965475F1FC2C701000C3F5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3E1B5681B4B88DBFBD96782 /* Pods-Tisdagsgolfen.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +395,7 @@
 		};
 		B96547601FC2C701000C3F5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7F2F72EEA2CFC8BC987CF30 /* Pods-Tisdagsgolfen.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

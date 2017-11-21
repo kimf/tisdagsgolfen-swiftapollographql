@@ -1,0 +1,16 @@
+query activeScoringSessionQuery {
+  activeScoringSession {
+    id
+    scoringType
+    teamEvent
+    course {
+      id
+      club
+      name
+    }
+  }
+}
+
+# export const withActiveScoringSessionQuery = graphql(activeScoringSessionQuery, {
+#   skip: ({ isLoggedin }) => !isLoggedin
+# })

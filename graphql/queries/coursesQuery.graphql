@@ -1,0 +1,10 @@
+query coursesQuery {
+  courses {
+    id
+    club
+    name
+    par
+    holeCount
+    eventCount
+  }
+}

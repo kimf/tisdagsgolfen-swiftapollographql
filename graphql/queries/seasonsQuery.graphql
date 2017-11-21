@@ -1,0 +1,8 @@
+query seasonsQuery {
+  seasons {
+    id
+    name
+    closed
+    photo
+  }
+}

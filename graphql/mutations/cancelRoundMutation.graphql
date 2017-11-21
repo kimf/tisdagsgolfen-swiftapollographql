@@ -1,0 +1,20 @@
+mutation cancelRoundMutation($scoringSessionId: ID!) {
+  deleteScoringSession(scoringSessionId: $scoringSessionId) {
+    id
+  }
+}
+
+# // export const withCancelRoundMutation = graphql(cancelRoundMutation, {
+# //   props: ({ mutate }) => ({
+# //     cancelRound: scoringSessionId =>
+# //       mutate({
+# //         variables: { scoringSessionId },
+# //         updateQueries: {
+# //           activeScoringSessionQuery: prev =>
+# //             update(prev, {
+# //               activeScoringSession: { $set: null }
+# //             })
+# //         }
+# //       })
+# //   })
+# // })
