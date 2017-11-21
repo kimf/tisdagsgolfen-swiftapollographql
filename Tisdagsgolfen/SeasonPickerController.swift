@@ -50,16 +50,19 @@ class SeasonPickerController: UIViewController, UICollectionViewDelegateFlowLayo
     }
     
     func collectionView(_ collectionView: UICollectionView, didHighlightItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) {
-            cell.contentView.backgroundColor = UIColor(white: 217.0/255.0, alpha: 1.0) // Apple default cell highlight color
-        }
+        let cell: UICollectionViewCell? = collectionView.cellForItem(at: indexPath)
+        //set color with animation
+        UIView.animate(withDuration: 0.1, delay: 0, options: .allowUserInteraction, animations: {() -> Void in
+            cell?.backgroundColor = UIColor(red: 232 / 255.0, green: 232 / 255.0, blue: 232 / 255.0, alpha: 1)
+        }) { _ in }
     }
     
-
     func collectionView(_ collectionView: UICollectionView, didUnhighlightItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) {
-            cell.contentView.backgroundColor = nil
-        }
+        let cell: UICollectionViewCell? = collectionView.cellForItem(at: indexPath)
+        //set color with animation
+        UIView.animate(withDuration: 0.1, delay: 0, options: .allowUserInteraction, animations: {() -> Void in
+            cell?.backgroundColor = UIColor.orange
+        }) { _ in }
     }
     
     override func didReceiveMemoryWarning() {

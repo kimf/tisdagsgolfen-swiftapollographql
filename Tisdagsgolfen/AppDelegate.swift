@@ -10,7 +10,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.backgroundColor = UIColor.lightGray
 
-        let navigationController = NavigationController()
+        let navigationController = UINavigationController()
+        // SwipeNavigationController(initWith: SwipeNavigationController)
+        navigationController.navigationBar.prefersLargeTitles = true
         
         let seasonPicker = SeasonPickerController()
         seasonPicker.title = "Säsonger"

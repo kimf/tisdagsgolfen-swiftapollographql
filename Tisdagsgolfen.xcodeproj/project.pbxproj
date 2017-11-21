@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B9502D551FC31A3D005D9A91 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9502D541FC31A3D005D9A91 /* NavigationController.swift */; };
 		B9502D571FC31C24005D9A91 /* SeasonPickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9502D561FC31C24005D9A91 /* SeasonPickerController.swift */; };
 		B9502D591FC31CA6005D9A91 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9502D581FC31CA6005D9A91 /* MainViewController.swift */; };
 		B96547501FC2C701000C3F5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B965474F1FC2C701000C3F5F /* AppDelegate.swift */; };
 		B96547571FC2C701000C3F5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B96547561FC2C701000C3F5F /* Assets.xcassets */; };
 		B965475A1FC2C701000C3F5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B96547581FC2C701000C3F5F /* LaunchScreen.storyboard */; };
+		B972E72E1FC42F5E0011510B /* Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B972E72D1FC42F5E0011510B /* Injection.swift */; };
+		B972E7301FC4369B0011510B /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B972E72F1FC4369B0011510B /* LeaderboardView.swift */; };
+		B972E7321FC437250011510B /* WeekHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B972E7311FC437250011510B /* WeekHeader.swift */; };
+		B972E7341FC43ACA0011510B /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B972E7331FC43ACA0011510B /* PaddingLabel.swift */; };
 		B99A5DB01FC2CC8E0059FA34 /* 1242x2208.png in Resources */ = {isa = PBXBuildFile; fileRef = B99A5DAF1FC2CC8E0059FA34 /* 1242x2208.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B9502D541FC31A3D005D9A91 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		B9502D561FC31C24005D9A91 /* SeasonPickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonPickerController.swift; sourceTree = "<group>"; };
 		B9502D581FC31CA6005D9A91 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B965474C1FC2C701000C3F5F /* Tisdagsgolfen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tisdagsgolfen.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,6 +27,10 @@
 		B96547561FC2C701000C3F5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B96547591FC2C701000C3F5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B965475B1FC2C701000C3F5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B972E72D1FC42F5E0011510B /* Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injection.swift; sourceTree = "<group>"; };
+		B972E72F1FC4369B0011510B /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		B972E7311FC437250011510B /* WeekHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHeader.swift; sourceTree = "<group>"; };
+		B972E7331FC43ACA0011510B /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		B99A5DAF1FC2CC8E0059FA34 /* 1242x2208.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1242x2208.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,8 +70,11 @@
 				B99A5DAF1FC2CC8E0059FA34 /* 1242x2208.png */,
 				B96547581FC2C701000C3F5F /* LaunchScreen.storyboard */,
 				B965475B1FC2C701000C3F5F /* Info.plist */,
-				B9502D541FC31A3D005D9A91 /* NavigationController.swift */,
 				B9502D561FC31C24005D9A91 /* SeasonPickerController.swift */,
+				B972E72D1FC42F5E0011510B /* Injection.swift */,
+				B972E72F1FC4369B0011510B /* LeaderboardView.swift */,
+				B972E7311FC437250011510B /* WeekHeader.swift */,
+				B972E7331FC43ACA0011510B /* PaddingLabel.swift */,
 			);
 			path = Tisdagsgolfen;
 			sourceTree = "<group>";
@@ -142,8 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9502D551FC31A3D005D9A91 /* NavigationController.swift in Sources */,
+				B972E7321FC437250011510B /* WeekHeader.swift in Sources */,
+				B972E7341FC43ACA0011510B /* PaddingLabel.swift in Sources */,
+				B972E7301FC4369B0011510B /* LeaderboardView.swift in Sources */,
 				B9502D571FC31C24005D9A91 /* SeasonPickerController.swift in Sources */,
+				B972E72E1FC42F5E0011510B /* Injection.swift in Sources */,
 				B96547501FC2C701000C3F5F /* AppDelegate.swift in Sources */,
 				B9502D591FC31CA6005D9A91 /* MainViewController.swift in Sources */,
 			);
