@@ -23,10 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let seasonPicker = SeasonPickerController(seasonsFromApi: data.seasons)
             seasonPicker.title = "Säsonger"
             
-            let firstSeason = data.seasons[1] // TODO: This is just to test out. should be find || 0
+            let currentSeason = data.seasons[1] // TODO: This is just to test out. should be find || 0
             
-            let mainView = MainViewController(seasonFromApi: firstSeason)
-            mainView.title = "\(firstSeason.name)"
+            let mainView = MainViewController(seasonFromApi: currentSeason)
+            mainView.title = "\(currentSeason.name)"
             navigationController.setViewControllers([seasonPicker, mainView], animated: true)
         }
         

@@ -20,6 +20,8 @@
 		B972E7301FC4369B0011510B /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B972E72F1FC4369B0011510B /* LeaderboardView.swift */; };
 		B972E7321FC437250011510B /* WeekHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B972E7311FC437250011510B /* WeekHeader.swift */; };
 		B972E7341FC43ACA0011510B /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B972E7331FC43ACA0011510B /* PaddingLabel.swift */; };
+		B98DBFFA1FC472F500DAD93F /* emptystate.png in Resources */ = {isa = PBXBuildFile; fileRef = B98DBFF91FC472F500DAD93F /* emptystate.png */; };
+		B98DBFFC1FC475EF00DAD93F /* ImagePreload.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98DBFFB1FC475EF00DAD93F /* ImagePreload.swift */; };
 		B99A5DB01FC2CC8E0059FA34 /* 1242x2208.png in Resources */ = {isa = PBXBuildFile; fileRef = B99A5DAF1FC2CC8E0059FA34 /* 1242x2208.png */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		B972E72F1FC4369B0011510B /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		B972E7311FC437250011510B /* WeekHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekHeader.swift; sourceTree = "<group>"; };
 		B972E7331FC43ACA0011510B /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		B98DBFF91FC472F500DAD93F /* emptystate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptystate.png; sourceTree = "<group>"; };
+		B98DBFFB1FC475EF00DAD93F /* ImagePreload.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePreload.swift; sourceTree = "<group>"; };
 		B99A5DAF1FC2CC8E0059FA34 /* 1242x2208.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1242x2208.png; sourceTree = "<group>"; };
 		C3E1B5681B4B88DBFBD96782 /* Pods-Tisdagsgolfen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tisdagsgolfen.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tisdagsgolfen/Pods-Tisdagsgolfen.debug.xcconfig"; sourceTree = "<group>"; };
 		D7F2F72EEA2CFC8BC987CF30 /* Pods-Tisdagsgolfen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tisdagsgolfen.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tisdagsgolfen/Pods-Tisdagsgolfen.release.xcconfig"; sourceTree = "<group>"; };
@@ -95,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				B921959E1FC45A740077D472 /* API.swift */,
+				B98DBFF91FC472F500DAD93F /* emptystate.png */,
 				B921959D1FC45A740077D472 /* graphql */,
 				B95A1D611FC4592300E95478 /* schema.json */,
 				B9502D581FC31CA6005D9A91 /* MainViewController.swift */,
@@ -108,6 +113,7 @@
 				B972E72F1FC4369B0011510B /* LeaderboardView.swift */,
 				B972E7311FC437250011510B /* WeekHeader.swift */,
 				B972E7331FC43ACA0011510B /* PaddingLabel.swift */,
+				B98DBFFB1FC475EF00DAD93F /* ImagePreload.swift */,
 			);
 			path = Tisdagsgolfen;
 			sourceTree = "<group>";
@@ -179,6 +185,7 @@
 				B921959F1FC45A740077D472 /* graphql in Resources */,
 				B99A5DB01FC2CC8E0059FA34 /* 1242x2208.png in Resources */,
 				B96547571FC2C701000C3F5F /* Assets.xcassets in Resources */,
+				B98DBFFA1FC472F500DAD93F /* emptystate.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +259,7 @@
 				B972E72E1FC42F5E0011510B /* Injection.swift in Sources */,
 				B96547501FC2C701000C3F5F /* AppDelegate.swift in Sources */,
 				B92195A01FC45A740077D472 /* API.swift in Sources */,
+				B98DBFFC1FC475EF00DAD93F /* ImagePreload.swift in Sources */,
 				B9502D591FC31CA6005D9A91 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

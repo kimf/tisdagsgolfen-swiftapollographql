@@ -23,28 +23,40 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout, 
         displayView.backgroundColor = UIColor.lightGray
         self.view.addSubview(displayView)
         
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
-        layout.itemSize = CGSize(width: 40, height: 40)
-        
         let top = navigationController?.navigationBar.frame.size.height
-        weekView = UICollectionView(frame: CGRect(x: 0, y: top!, width: self.view.frame.size.width, height: 80), collectionViewLayout: layout)
-        weekView.dataSource = self
-        weekView.delegate = self
-        weekView.isPagingEnabled = true
-        weekView.showsHorizontalScrollIndicator = false
-        weekView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
-        weekView.backgroundColor = UIColor.gray
-        displayView.addSubview(weekView)
         
-        let topPlus = top! + 80
-        let weekHeader = WeekHeader(frame: CGRect(x: 0, y: topPlus, width: self.view.frame.size.width, height: 60))
-        displayView.addSubview(weekHeader)
-        
-        let topPlusPlus = topPlus + 60
-        let leaderboardView = LeaderboardView(frame: CGRect(x: 0, y: topPlusPlus, width: self.view.frame.size.width, height: self.view.frame.size.height - topPlusPlus))
-        displayView.addSubview(leaderboardView)
+        if (weeks.count > 0) {
+            let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+            layout.scrollDirection = .horizontal
+            layout.sectionInset = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+            layout.itemSize = CGSize(width: 40, height: 40)
+            
+            weekView = UICollectionView(frame: CGRect(x: 0, y: top!, width: self.view.frame.size.width, height: 80), collectionViewLayout: layout)
+            weekView.dataSource = self
+            weekView.delegate = self
+            weekView.isPagingEnabled = true
+            weekView.showsHorizontalScrollIndicator = false
+            weekView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+            weekView.backgroundColor = UIColor.gray
+            displayView.addSubview(weekView)
+            
+            let topPlus = top! + 80
+            let weekHeader = WeekHeader(frame: CGRect(x: 0, y: topPlus, width: self.view.frame.size.width, height: 60))
+            displayView.addSubview(weekHeader)
+            
+            let topPlusPlus = topPlus + 60
+            let leaderboardView = LeaderboardView(frame: CGRect(x: 0, y: topPlusPlus, width: self.view.frame.size.width, height: self.view.frame.size.height - topPlusPlus))
+            displayView.addSubview(leaderboardView)
+        } else {
+            let imageView : UIImageView = {
+                let iv = UIImageView(frame: CGRect(x: 0, y: top!, width: self.view.frame.size.width, height: self.view.frame.size.height - top!))
+                iv.image = UIImage(named: "emptystate.png")
+                iv.contentMode = .scaleAspectFill
+                return iv
+            }()
+            
+            displayView.addSubview(imageView)
+        }
         
     }
     
