@@ -2613,9 +2613,11 @@ public final class ScoringSessionQuery: GraphQLQuery {
       }
 
       public init(id: GraphQLID, currentHole: Int, scoringType: String, teamEvent: Bool, course: Course, scoringItems: [ScoringItem], liveScores: [LiveScore]? = nil) {
-        self.init(snapshot: ["__typename": "ScoringSession", "id": id, "currentHole": currentHole, "scoringType": scoringType, "teamEvent": teamEvent, "course": course.snapshot, "scoringItems": scoringItems.map { $0.snapshot }, "liveScores": liveScores.flatMap { $0.map { $0.snapshot } }])
+        let scoringItemsMap = scoringItems.map { $0.snapshot }
+        let liveScoresMap = liveScores.flatMap { $0.map { $0.snapshot } }
+        self.init(snapshot: ["__typename": "ScoringSession", "id": id, "currentHole": currentHole, "scoringType": scoringType, "teamEvent": teamEvent, "course": course.snapshot, "scoringItems": scoringItemsMap, "liveScores": liveScoresMap])
       }
-
+        
       public var __typename: String {
         get {
           return snapshot["__typename"]! as! String

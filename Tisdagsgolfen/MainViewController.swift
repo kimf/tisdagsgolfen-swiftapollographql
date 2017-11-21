@@ -4,7 +4,14 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout, 
 
     var displayView: UIView!
     var weekView: UICollectionView!
+    var season: InitialQueryQuery.Data.Season!
     var weeks: NSArray! = []
+    
+    convenience init(seasonFromApi: InitialQueryQuery.Data.Season!) {
+        self.init()
+        season = seasonFromApi
+        weeks = season.eventIds! as NSArray
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,8 +22,6 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout, 
         displayView = UIView(frame: self.view.frame)
         displayView.backgroundColor = UIColor.lightGray
         self.view.addSubview(displayView)
-        
-        weeks = [18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
         
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -100,4 +105,3 @@ class MainViewController: UIViewController, UICollectionViewDelegateFlowLayout, 
 
 
 }
-

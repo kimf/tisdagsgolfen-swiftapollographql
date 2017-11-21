@@ -1,19 +1,24 @@
 import UIKit
+import Apollo
 
 class SeasonPickerController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     var collectionView: UICollectionView!
-    var seasons: NSArray! = []
+    var seasons: [InitialQueryQuery.Data.Season] = []
+    
+    convenience init(seasonsFromApi: [InitialQueryQuery.Data.Season]) {
+        self.init()
+        seasons = seasonsFromApi
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Säsonger"
         
-        seasons = [2018, 2017, 2016, 2015, 2014]
-        
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-        layout.itemSize = CGSize(width: 90, height: 120)
+        layout.itemSize = CGSize(width: 150, height: 80)
         
         collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
         collectionView.dataSource = self
@@ -25,7 +30,7 @@ class SeasonPickerController: UIViewController, UICollectionViewDelegateFlowLayo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let mainViewController = MainViewController()
-        mainViewController.title = "\(seasons[indexPath.row])"
+        mainViewController.title = "\(seasons[indexPath.row].name)"
         
         self.navigationController?.pushViewController(mainViewController, animated: true)
     }
@@ -36,13 +41,39 @@ class SeasonPickerController: UIViewController, UICollectionViewDelegateFlowLayo
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath as IndexPath)
-                
-        cell.backgroundColor = UIColor.orange
+        cell.backgroundColor = UIColor.lightGray
+        cell.backgroundView = UIImageView()
+        for item in cell.contentView.subviews {
+            item.removeFromSuperview()
+        }
         
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 70, height: 100))
-        label.center = CGPoint(x: 20, y: 20)
+        
+        let season = seasons[indexPath.row]
+    
+        if (season.photo != nil) {
+            let photoUrl = URL(string: season.photo!)
+            let imageData = try? Data(contentsOf: photoUrl! as URL)
+            
+            if((imageData) != nil) {
+                let imageView : UIImageView = {
+                    let iv = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 80))
+                    iv.image = UIImage(data: imageData!)
+                    iv.contentMode = .scaleAspectFill
+                    return iv
+                }()
+                
+                cell.backgroundView = imageView
+            }
+        } else {
+            cell.backgroundColor = UIColor.orange
+        }
+    
+        
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 150, height: 80))
         label.textAlignment = .center
-        label.text = "\(seasons[indexPath.row])"
+        label.text = "\(season.name)"
+        label.textColor = UIColor.white
+        label.adjustsFontSizeToFitWidth = true
         label.tag = indexPath.row
         cell.contentView.addSubview(label)
         

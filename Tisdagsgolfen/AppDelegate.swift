@@ -1,12 +1,15 @@
 import UIKit
+import Apollo
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let apollo = ApolloClient(url: URL(string: "https://www.tisdagsgolfen.se/api/graphql")!)
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        apollo.cacheKeyForObject = { $0["id"] }
         window = UIWindow(frame: UIScreen.main.bounds)
         window!.backgroundColor = UIColor.lightGray
 
@@ -14,15 +17,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // SwipeNavigationController(initWith: SwipeNavigationController)
         navigationController.navigationBar.prefersLargeTitles = true
         
-        let seasonPicker = SeasonPickerController()
-        seasonPicker.title = "Säsonger"
-        
-        let mainView = MainViewController()
-        mainView.title = "2018"
-        navigationController.setViewControllers([seasonPicker, mainView], animated: true)
+        apollo.fetch(query: InitialQueryQuery()) {(result, error) in
+            guard let data = result?.data else { return }
+            
+            let seasonPicker = SeasonPickerController(seasonsFromApi: data.seasons)
+            seasonPicker.title = "Säsonger"
+            
+            let firstSeason = data.seasons[1] // TODO: This is just to test out. should be find || 0
+            
+            let mainView = MainViewController(seasonFromApi: firstSeason)
+            mainView.title = "\(firstSeason.name)"
+            navigationController.setViewControllers([seasonPicker, mainView], animated: true)
+        }
         
         window!.rootViewController = navigationController
-        
         window!.makeKeyAndVisible()
         return true
     }
